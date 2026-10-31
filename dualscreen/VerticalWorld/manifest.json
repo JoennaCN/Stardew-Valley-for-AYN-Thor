@@ -1,0 +1,9 @@
+{
+  "Name": "Stardew Valley for AYN Thor",
+  "Author": "ZeroFrame LAB",
+  "Version": "0.6.3-reference-v2",
+  "Description": "AYN Thor dual-screen edition by ZeroFrame LAB.",
+  "UniqueID": "RGDSplus.VerticalWorld",
+  "EntryDll": "VerticalWorld.dll",
+  "MinimumApiVersion": "4.5.2"
+}

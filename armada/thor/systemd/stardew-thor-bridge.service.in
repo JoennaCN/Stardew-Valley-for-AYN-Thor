@@ -1,0 +1,12 @@
+[Unit]
+Description=Stardew Valley AYN Thor lower-screen bridge
+After=gamescope-session-plus@steam.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 @MOD_DIRECTORY@/armada/thor/native/bridge.py @MOD_DIRECTORY@
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target

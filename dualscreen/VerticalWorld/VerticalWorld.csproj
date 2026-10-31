@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>VerticalWorld</AssemblyName>
+    <RootNamespace>Rgdsplus.VerticalWorld</RootNamespace>
+    <Nullable>disable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GamePath Condition="'$(GamePath)' == ''">../../port/stardewvalleymainline/gamedata</GamePath>
+    <SmapiPath Condition="'$(SmapiPath)' == ''">../../port/stardewvalleymainline/tools/SMAPIBundle/game-root</SmapiPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FirstUseMethods.txt" LogicalName="Rgdsplus.FirstUseMethods.txt" />
+    <Content Include="../../armada/thor/native/**/*" Link="armada/thor/native/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../armada/thor/systemd/**/*" Link="armada/thor/systemd/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../armada/thor/LICENSE.bottom-screen" Link="armada/thor/LICENSE.bottom-screen" CopyToOutputDirectory="PreserveNewest" />
+    <Reference Include="0Harmony" HintPath="$(SmapiPath)/smapi-internal/0Harmony.dll" Private="false" />
+    <Reference Include="xTile" HintPath="$(GamePath)/xTile.dll" Private="false" />
+    <Reference Include="StardewValley.GameData" HintPath="$(GamePath)/StardewValley.GameData.dll" Private="false" />
+    <Reference Include="StardewModdingAPI" HintPath="$(SmapiPath)/StardewModdingAPI.dll" Private="false" />
+    <Reference Include="SMAPI.Toolkit.CoreInterfaces" HintPath="$(SmapiPath)/smapi-internal/SMAPI.Toolkit.CoreInterfaces.dll" Private="false" />
+    <Reference Include="Stardew Valley" HintPath="$(GamePath)/Stardew Valley.dll" Private="false" />
+    <Reference Include="MonoGame.Framework" HintPath="$(GamePath)/MonoGame.Framework.dll" Private="false" />
+  </ItemGroup>
+</Project>
