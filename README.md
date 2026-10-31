@@ -145,8 +145,7 @@ dualscreen/VerticalWorld/   SMAPI 双屏插件
 armada/thor/native/         ArmadaOS 下屏桥接与 DMA-BUF 显示
 armada/thor/systemd/        用户级桥接服务
 packaging/thor/             AYN Thor 安装与卸载脚本
-docs/                       设计、兼容和性能记录
-tools/                      构建、验证与诊断工具
+docs/                       Thor 显示配置说明
 ```
 
 ## 致谢与声明
